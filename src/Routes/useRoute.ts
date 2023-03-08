@@ -8,7 +8,7 @@ import {z} from 'zod'
 import { RegisterTypes } from '../zod/zodValid'
 
 router.post('/createuser', createUser)
-router.get('/login', validate(RegisterTypes), Login )
+router.post('/login', validate(RegisterTypes), Login )
 // Task Section
 router.post('/createtask', createTask)
 router.get('/byid', auth, getTaskById)

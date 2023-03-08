@@ -48,7 +48,10 @@ try {
         
     }
     const token = jwt.sign({ email: log.email }, process.env.API_SECRET as string, { expiresIn: '3h' });
+    console.log(token);
     return res.json({ token , message: 'Logged in successfully' });
+    
+    
 } catch (e) {
     console.log(e);
 }
